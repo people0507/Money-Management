@@ -9,6 +9,15 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-<!--    Tạo ở đây -->
-
+<!--    Tạo màu ở đây nhé -->
+    <color name="linear_gradient0">#FFF8EDD8</color>
+    <color name="linear_gradient100">#FFFFF6E5</color>
+    <color name="dark_grey">#FF767474</color>
+    <color name="grey_botnavicon">#FFC6C6C6</color>
+    <color name="grey_desTrans">#FF91919F</color>
+    <color name="green">#FF00A86B</color>
+    <color name="red">#FFFD3C4A</color>
+    <color name="orange">#FFFCAC12</color>
+    <color name="pink">#FFFFE2E4</color>
+    <color name="purple_app">#FF7F3DFF</color>
 </resources>
