@@ -20,4 +20,5 @@
     <color name="orange">#FFFCAC12</color>
     <color name="pink">#FFFFE2E4</color>
     <color name="purple_app">#FF7F3DFF</color>
+    <color name="main_colour"> #A89696</color>
 </resources>
