@@ -214,82 +214,93 @@
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="350dp"
-                    android:orientation="vertical"
-                    android:background="@color/main_colour">
+                    android:layout_height="367dp"
+                    android:background="@color/main_colour"
+                    android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:layout_marginTop="20dp"
-                        android:background="@drawable/button_border">
+                        android:background="@drawable/button_border"
+                        android:orientation="horizontal">
+
                         <androidx.appcompat.widget.AppCompatButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Today"
-                            android:textAppearance="@style/SmallText_2"
                             android:layout_marginVertical="5dp"
                             android:layout_marginLeft="20dp"
+                            android:layout_weight="1"
                             android:background="@color/main_colour"
-                            android:textColor="@color/black"/>
+                            android:text="Today"
+                            android:textAppearance="@style/SmallText_2"
+                            android:textColor="@color/black" />
+
                         <androidx.appcompat.widget.AppCompatButton
                             android:layout_width="wrap_content"
-                            android:layout_marginVertical="5dp"
-                            android:textAppearance="@style/SmallText_2"
                             android:layout_height="wrap_content"
+                            android:layout_marginVertical="5dp"
+                            android:layout_weight="1"
                             android:background="@color/main_colour"
                             android:text="Week"
-                            android:layout_weight="1"/>
+                            android:textAppearance="@style/SmallText_2" />
+
                         <androidx.appcompat.widget.AppCompatButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginVertical="5dp"
-                            android:textAppearance="@style/SmallText_2"
+                            android:layout_weight="1"
                             android:background="@color/main_colour"
                             android:text="Month"
-                            android:layout_weight="1"/>
+                            android:textAppearance="@style/SmallText_2" />
+
                         <androidx.appcompat.widget.AppCompatButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@color/main_colour"
                             android:layout_marginVertical="5dp"
-                            android:textAppearance="@style/SmallText_2"
                             android:layout_marginRight="20dp"
+                            android:layout_weight="1"
+                            android:background="@color/main_colour"
                             android:text="Year"
-                            android:layout_weight="1"/>
+                            android:textAppearance="@style/SmallText_2" />
                     </LinearLayout>
+
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="46dp"
                         android:layout_gravity="center_horizontal"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="10dp">
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="20dp"
                             android:layout_weight="1"
                             android:text="Recent Transaction"
-                            android:textAppearance="@style/SmallText_2"/>
+                            android:textAppearance="@style/SmallText_2" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="130dp"
-                            android:textAppearance="@style/SmallText_2"
                             android:layout_weight="1"
-                            android:text="View ALL" />
+                            android:text="View ALL"
+                            android:textAppearance="@style/SmallText_2" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="54dp"
@@ -304,6 +315,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:background="@drawable/green_income_detail"
                                 android:orientation="vertical">
+
                                 <ImageView
                                     android:layout_width="22dp"
                                     android:layout_height="22dp"
@@ -317,6 +329,7 @@
                                 android:layout_height="48dp"
                                 android:layout_gravity="center_vertical"
                                 android:orientation="horizontal">
+
                                 <ImageView
                                     android:layout_width="22dp"
                                     android:layout_height="22dp"
@@ -332,6 +345,7 @@
                                     android:text="25000"
                                     android:textAppearance="@style/SmallText_3"
                                     android:textColor="@color/black" />
+
                                 <TextView
                                     android:layout_width="60dp"
                                     android:layout_height="20dp"
@@ -342,6 +356,7 @@
                             </LinearLayout>
 
                         </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="54dp"
@@ -349,6 +364,7 @@
                             android:layout_marginVertical="10dp"
                             android:background="@drawable/detail_bg"
                             android:orientation="horizontal">
+
                             <FrameLayout
                                 android:layout_width="48dp"
                                 android:layout_height="48dp"
@@ -356,6 +372,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:background="@drawable/red_detail_bg"
                                 android:orientation="vertical">
+
                                 <ImageView
                                     android:layout_width="22dp"
                                     android:layout_height="22dp"
@@ -363,11 +380,13 @@
                                     android:src="@drawable/white_down_arrow" />
 
                             </FrameLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="48dp"
                                 android:layout_gravity="center_vertical"
                                 android:orientation="horizontal">
+
                                 <ImageView
                                     android:layout_width="22dp"
                                     android:layout_height="22dp"
@@ -383,6 +402,7 @@
                                     android:text="6500"
                                     android:textAppearance="@style/SmallText_3"
                                     android:textColor="@color/black" />
+
                                 <TextView
                                     android:layout_width="60dp"
                                     android:layout_height="20dp"
@@ -393,6 +413,7 @@
                             </LinearLayout>
 
                         </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="54dp"
@@ -407,6 +428,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:background="@drawable/green_income_detail"
                                 android:orientation="vertical">
+
                                 <ImageView
                                     android:layout_width="22dp"
                                     android:layout_height="22dp"
@@ -420,6 +442,7 @@
                                 android:layout_height="48dp"
                                 android:layout_gravity="center_vertical"
                                 android:orientation="horizontal">
+
                                 <ImageView
                                     android:layout_width="22dp"
                                     android:layout_height="22dp"
@@ -435,6 +458,7 @@
                                     android:text="2700"
                                     android:textAppearance="@style/SmallText_3"
                                     android:textColor="@color/black" />
+
                                 <TextView
                                     android:layout_width="60dp"
                                     android:layout_height="20dp"
@@ -448,6 +472,8 @@
 
                     </LinearLayout>
                 </LinearLayout>
+
+
             </LinearLayout>
 
         </LinearLayout>

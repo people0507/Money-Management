@@ -12,6 +12,10 @@
         android:title="@string/title_tran" />
 
     <item
+        android:id="@+id/add_icon"
+        android:icon="@drawable/addbotnav_icon"
+        android:title="@string/title_add" />
+    <item
         android:id="@+id/sta_icon"
         android:icon="@drawable/statiticsbotnav_icon"
         android:title="@string/title_sta" />
