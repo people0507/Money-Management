@@ -40,6 +40,9 @@ public class MainActivity2 extends AppCompatActivity {
                 case R.id.tran_icon:
                     replaceFragment(new ProfileFragment());
                     break;
+                case R.id.add_icon:
+                    replaceFragment(new AddFragment());
+                    break;
                 case R.id.sta_icon:
                     replaceFragment(new ProfileFragment());
                     break;
