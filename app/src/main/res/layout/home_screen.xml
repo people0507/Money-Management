@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/main_colour">
+    android:background="@color/dark_grey">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="50dp" />
+                    android:layout_height="30dp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -101,7 +101,7 @@
                         android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="170dp"
+                            android:layout_width="150dp"
                             android:layout_height="80dp"
                             android:background="@drawable/income"
                             android:orientation="horizontal">
@@ -156,11 +156,11 @@
                         </LinearLayout>
 
                         <TextView
-                            android:layout_width="20dp"
+                            android:layout_width="40dp"
                             android:layout_height="wrap_content" />
 
                         <LinearLayout
-                            android:layout_width="170dp"
+                            android:layout_width="150dp"
                             android:layout_height="80dp"
                             android:background="@drawable/expenses">
 
@@ -287,8 +287,168 @@
                         android:layout_weight="1"
                         android:text="View ALL" />
                 </LinearLayout>
-            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@drawable/detail_bg"
+                        android:orientation="horizontal">
 
+                        <FrameLayout
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/green_income_detail"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/white_up_arrow" />
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/money_icon" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="0dp"
+                                android:text="25000"
+                                android:textAppearance="@style/SmallText_3"
+                                android:textColor="@color/black" />
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="90dp"
+                                android:text="Income"
+                                android:textColor="@color/grey_desTrans" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="10dp"
+                        android:background="@drawable/detail_bg"
+                        android:orientation="horizontal">
+                        <FrameLayout
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/red_detail_bg"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/white_down_arrow" />
+
+                        </FrameLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/money_icon" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="0dp"
+                                android:text="6500"
+                                android:textAppearance="@style/SmallText_3"
+                                android:textColor="@color/black" />
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="90dp"
+                                android:text="Food"
+                                android:textColor="@color/grey_desTrans" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@drawable/detail_bg"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/green_income_detail"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/white_up_arrow" />
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/money_icon" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="0dp"
+                                android:text="2700"
+                                android:textAppearance="@style/SmallText_3"
+                                android:textColor="@color/black" />
+                            <TextView
+                                android:layout_width="60dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="90dp"
+                                android:text="Income"
+                                android:textColor="@color/grey_desTrans" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
         </LinearLayout>

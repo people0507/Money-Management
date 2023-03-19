@@ -58,14 +58,14 @@
 
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCon"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|bottom"
+                android:background="@drawable/splashscreen_button"
                 android:text="Continue"
                 android:textAppearance="@style/SmallText_2"
-                android:textColor="@color/white"
-                android:background="@drawable/splashscreen_button"
-                />
+                android:textColor="@color/white" />
 
         </LinearLayout>
 

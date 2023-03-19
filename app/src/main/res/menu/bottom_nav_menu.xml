@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_icon"
+        android:icon="@drawable/homenavbot_icon"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/tran_icon"
+        android:icon="@drawable/transbotnav_icon"
+        android:title="@string/title_tran" />
+
+    <item
+        android:id="@+id/add_icon"
+        android:icon="@drawable/addbotnav_icon"
+        android:title="@string/title_add" />
+    <item
+        android:id="@+id/sta_icon"
+        android:icon="@drawable/statiticsbotnav_icon"
+        android:title="@string/title_sta" />
+
+    <item
+        android:id="@+id/pro_icon"
+        android:icon="@drawable/profilebotnav_icon"
+        android:title="@string/title_pro" />
+</menu>

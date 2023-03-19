@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Money Management</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_tran">Transtraction</string>
+    <string name="title_add">Add</string>
+    <string name="title_sta">Statitics</string>
+    <string name="title_pro">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
