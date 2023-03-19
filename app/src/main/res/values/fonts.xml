@@ -42,7 +42,7 @@
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
-    <style name="SmallText_4">
+            <style name="SmallText_4">
         <item name="android:textSize">18sp</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/black</item>
@@ -64,6 +64,12 @@
     </style>
     <style name="Botnav_Text">
         <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="SmallText_7">
+        <item name="android:textSize">13sp</item>
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">sans-serif</item>
