@@ -38,7 +38,7 @@ public class MainActivity2 extends AppCompatActivity {
                     replaceFragment(new HomeFragment());
                     break;
                 case R.id.tran_icon:
-                    replaceFragment(new ProfileFragment());
+                    replaceFragment(new TransactionFragment());
                     break;
                 case R.id.add_icon:
                     replaceFragment(new AddFragment());
