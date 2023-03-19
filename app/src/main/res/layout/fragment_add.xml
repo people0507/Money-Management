@@ -1,14 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddFragment">
+    android:orientation="vertical"
+    android:background="@color/linear_gradient100">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:text="Add Transaction"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textAppearance="@style/SmallText_4"
+        android:layout_marginVertical="20dp"
+        />
 
-</FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How much?"
+        android:textAppearance="@style/SmallText_4"
+        android:textColor="@color/dark_grey"
+        android:layout_marginLeft="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/money_icon"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="55698"
+            android:textColor="@color/black"
+            android:textAppearance="@style/BoldText_1"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+    
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:orientation="vertical">
+            
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_background">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+
+                    android:layout_marginVertical="30dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="category"
+                        android:background="@drawable/box_border"
+                        android:textAppearance="@style/ThinText"
+                        android:paddingLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/dark_grey"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="description"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/dark_grey"
+                        android:background="@drawable/box_border"
+                        android:textAppearance="@style/ThinText"
+                        android:gravity="center_vertical"
+
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center_horizontal">
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="income"
+                            android:background="@drawable/income"/>
+
+                    </LinearLayout>
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="expense"
+                            android:textColor="@color/white"
+                            android:background="@drawable/expenses"
+                        />
+                    </LinearLayout>
+                        </LinearLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="pick your date"
+                        android:paddingLeft="10dp"
+                        android:background="@drawable/box_border"
+                        android:textAppearance="@style/ThinText"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/dark_grey"
+                        />
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/purple_bg2"
+        android:textColor="@color/white"
+        android:text="continue"/>
+
+</LinearLayout>
