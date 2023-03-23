@@ -1,14 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    android:orientation="vertical"
+    android:background="@color/linear_gradient100">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="80dp"
+        android:layout_marginHorizontal="20dp">
 
-</FrameLayout>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/big_avt"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginHorizontal="30dp">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:text="Username"
+                android:textAppearance="@style/SmallText_2"
+                android:textAlignment="center"
+                android:textColor="@color/grey_desTrans"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Vishnu P V"
+                android:textAppearance="@style/SmallText_5"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="21dp"
+            android:src="@drawable/pencil_icon"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="60dp"/>
+
+    </LinearLayout>
+
+ <FrameLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:background="@drawable/tran_background"
+     android:layout_marginHorizontal="15dp">
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:layout_marginHorizontal="20dp">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="50dp"
+             android:orientation="horizontal"
+             android:layout_marginVertical="20dp">
+
+
+             <ImageView
+                 android:layout_width="60dp"
+                 android:layout_height="match_parent"
+                 android:src="@drawable/wallet_icon"/>
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:text="Account"
+                 android:gravity="center_vertical"
+                 android:textAppearance="@style/ThinText"
+                 android:layout_marginLeft="10dp"/>
+
+
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="50dp"
+             android:orientation="horizontal"
+             android:layout_marginVertical="20dp">
+
+
+             <ImageView
+                 android:layout_width="60dp"
+                 android:layout_height="match_parent"
+                 android:src="@drawable/setting_icon"/>
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:text="Settings"
+                 android:gravity="center_vertical"
+                 android:textAppearance="@style/ThinText"
+                 android:layout_marginLeft="10dp"/>
+
+
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="50dp"
+             android:orientation="horizontal"
+             android:layout_marginVertical="20dp">
+
+
+             <ImageView
+                 android:layout_width="60dp"
+                 android:layout_height="match_parent"
+                 android:src="@drawable/export_icon"/>
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:text="Export Data"
+                 android:gravity="center_vertical"
+                 android:textAppearance="@style/ThinText"
+                 android:layout_marginLeft="10dp"/>
+
+
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="50dp"
+             android:orientation="horizontal"
+             android:layout_marginVertical="20dp">
+
+
+             <ImageView
+                 android:layout_width="60dp"
+                 android:layout_height="match_parent"
+                 android:src="@drawable/logout_icon"/>
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:text="Logout"
+                 android:gravity="center_vertical"
+                 android:textAppearance="@style/ThinText"
+                 android:layout_marginLeft="10dp"/>
+
+
+         </LinearLayout>
+
+
+
+     </LinearLayout>
+
+
+
+
+
+
+
+
+ </FrameLayout>
+
+
+</LinearLayout>
