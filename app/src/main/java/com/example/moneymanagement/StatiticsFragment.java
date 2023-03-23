@@ -3,17 +3,23 @@ package com.example.moneymanagement;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.moneymanagement.ui.AdapterFragment;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 
@@ -30,6 +36,11 @@ public class StatiticsFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     private final int bg = 0xFFFFF6E5;
+
+    TabLayout tabLayout;
+    ViewPager2 viewPager2;
+    AdapterFragment adapterFragment;
+
 
 
 
@@ -94,5 +105,26 @@ public class StatiticsFragment extends Fragment {
         pieChart.animateY(2000);
         return view;
 
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        tabLayout = view.findViewById(R.id.tab_layout);
+        viewPager2 = view.findViewById(R.id.view_pager);
+        adapterFragment = new AdapterFragment(this);
+        viewPager2.setAdapter(adapterFragment);
+        TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayout, viewPager2, new TabLayoutMediator.TabConfigurationStrategy() {
+            @Override
+            public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+                if(position==0){
+                    tab.setText("Expense");
+                }
+                else if (position == 1){
+                    tab.setText("Income");
+                }
+            }
+        });
+        tabLayoutMediator.attach();
     }
 }

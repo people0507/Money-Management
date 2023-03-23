@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/linear_gradient100">
 
@@ -30,7 +31,7 @@
                 android:layout_height="45dp"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_margin="15dp"
+                android:layout_margin="10dp"
                 >
                 <ImageView
                     android:layout_width="20dp"
@@ -47,13 +48,31 @@
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/pie_chart"
                 android:layout_width="250dp"
-                android:layout_height="250dp"/>
+                android:layout_height="250dp"
+                android:layout_marginVertical="30dp"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="380dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fixcolor_tablayout1"
+                app:tabBackground="@animator/color_tab_layout"
+                app:tabTextAppearance="@style/ThinText"
+                app:tabTextColor="@color/black"
+                app:tabSelectedTextColor="@color/white"
+                app:tabIndicatorHeight="0dp"
+                app:tabRippleColor="@color/red">
 
+            </com.google.android.material.tabs.TabLayout>
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
             </LinearLayout>
         </LinearLayout>
 
