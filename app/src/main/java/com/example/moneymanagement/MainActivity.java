@@ -13,7 +13,7 @@ import android.widget.Button;
 import com.example.moneymanagement.model.MoneyDatabaseClass;
 
 public class MainActivity extends AppCompatActivity {
-     static MoneyDatabaseClass moneyDatabaseClass;
+    public static MoneyDatabaseClass moneyDatabaseClass;
 
     Button btnCon;
     @Override
