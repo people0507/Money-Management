@@ -10,7 +10,10 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.example.moneymanagement.model.ExpenseRecyclerAdapter;
+import com.example.moneymanagement.model.MoneyDao;
 import com.example.moneymanagement.ui1.AdapterFragment1;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -20,6 +23,7 @@ public class HomeFragment extends Fragment {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     AdapterFragment1 adapterFragment1;
+    MoneyDao dao = MainActivity.moneyDatabaseClass.moneyDao();
 
 
     public HomeFragment() {
@@ -33,6 +37,18 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        dao.getValueSum().observe(this,sum->{
+            TextView textView = view.findViewById(R.id.sumExpense);
+            textView.setText(String.valueOf(sum));
+        });
+        dao.getValueIncomeSum().observe(this,sum->{
+            TextView textView = view.findViewById(R.id.incomeSum);
+            textView.setText(String.valueOf(sum));
+        });
+        dao.getIncomeMinusExpense().observe(this,sum->{
+            TextView textView = view.findViewById(R.id.accBalans);
+            textView.setText(String.valueOf(sum));
+        });
         return view;
     }
 
