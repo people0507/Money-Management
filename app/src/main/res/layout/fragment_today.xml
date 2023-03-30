@@ -28,7 +28,7 @@
             </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="120dp"
                 android:id="@+id/incomeRecycleView"/>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -50,7 +50,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/expenseRecycleView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="120dp" />
         </LinearLayout>
 
 </LinearLayout>
