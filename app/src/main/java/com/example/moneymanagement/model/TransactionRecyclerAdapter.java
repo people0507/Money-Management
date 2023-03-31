@@ -30,6 +30,7 @@ public class TransactionRecyclerAdapter extends RecyclerView.Adapter<Transaction
       holder.tvValue.setText(String.valueOf(list.get(position).getValue()));
       holder.tvCategory.setText(list.get(position).getCategory());
       holder.tvDes.setText((list.get(position)).getDescribe());
+      holder.tvDate.setText((list.get(position)).getDate());
     }
 
     @Override
@@ -37,13 +38,14 @@ public class TransactionRecyclerAdapter extends RecyclerView.Adapter<Transaction
         return list.size();
     }
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView tvCategory, tvValue,tvDes;
+        TextView tvCategory, tvValue,tvDes,tvDate;
                 public MyViewHolder(@NonNull View itemView)
                 {
                     super(itemView);
                     tvCategory = itemView.findViewById(R.id.transactionCategory);
                     tvValue = itemView.findViewById(R.id.transactionValue);
                     tvDes = itemView.findViewById(R.id.transactionDes);
+                    tvDate = itemView.findViewById(R.id.expenseDate);
                 }
     }
 }
