@@ -42,12 +42,6 @@ public class TransactionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_transaction, container, false);
-        recyclerView = view.findViewById(R.id.transactionRecycler);
-        layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
-        List<Expense> list = MainActivity.moneyDatabaseClass.moneyDao().getMonthExpense();
-        transactionRecyclerAdapter = new TransactionRecyclerAdapter(list);
-        recyclerView.setAdapter(transactionRecyclerAdapter);
         return view;
     }
 
