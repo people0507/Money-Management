@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.moneymanagement.MainActivity;
 import com.example.moneymanagement.R;
@@ -25,7 +26,7 @@ public class TranExpenseFragment extends Fragment {
      private  RecyclerView.LayoutManager layoutManager;
 
      TransactionRecyclerAdapter transactionRecyclerAdapter;
-
+    Button btnToday, btnMonth,btnYear,btnWeek;
 
 
     public TranExpenseFragment() {
@@ -44,6 +45,54 @@ public class TranExpenseFragment extends Fragment {
         List<Expense> list = MainActivity.moneyDatabaseClass.moneyDao().getMonthExpense();
         transactionRecyclerAdapter = new TransactionRecyclerAdapter(list);
         recyclerView.setAdapter(transactionRecyclerAdapter);
+        btnToday = view.findViewById(R.id.Today);
+        btnMonth = view.findViewById(R.id.Month);
+        btnWeek = view.findViewById(R.id.Week);
+        btnYear = view.findViewById(R.id.Year);
+        btnToday.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                recyclerView = view.findViewById(R.id.transExpense);
+                layoutManager = new LinearLayoutManager(getActivity());
+                recyclerView.setLayoutManager(layoutManager);
+                List<Expense> list = MainActivity.moneyDatabaseClass.moneyDao().getExpense();
+                transactionRecyclerAdapter = new TransactionRecyclerAdapter(list);
+                recyclerView.setAdapter(transactionRecyclerAdapter);
+            }
+        });
+        btnMonth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view2) {
+                recyclerView = view.findViewById(R.id.transExpense);
+                layoutManager = new LinearLayoutManager(getActivity());
+                recyclerView.setLayoutManager(layoutManager);
+                List<Expense> list = MainActivity.moneyDatabaseClass.moneyDao().getMonthExpense();
+                transactionRecyclerAdapter = new TransactionRecyclerAdapter(list);
+                recyclerView.setAdapter(transactionRecyclerAdapter);
+            }
+        });
+        btnWeek.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view3) {
+                recyclerView = view.findViewById(R.id.transExpense);
+                layoutManager = new LinearLayoutManager(getActivity());
+                recyclerView.setLayoutManager(layoutManager);
+                List<Expense> list = MainActivity.moneyDatabaseClass.moneyDao().getWeekExpense();
+                transactionRecyclerAdapter = new TransactionRecyclerAdapter(list);
+                recyclerView.setAdapter(transactionRecyclerAdapter);
+            }
+        });
+        btnYear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view4) {
+                recyclerView = view.findViewById(R.id.transExpense);
+                layoutManager = new LinearLayoutManager(getActivity());
+                recyclerView.setLayoutManager(layoutManager);
+                List<Expense> list = MainActivity.moneyDatabaseClass.moneyDao().getYearExpense();
+                transactionRecyclerAdapter = new TransactionRecyclerAdapter(list);
+                recyclerView.setAdapter(transactionRecyclerAdapter);
+            }
+        });
         return view;
     }
 }
