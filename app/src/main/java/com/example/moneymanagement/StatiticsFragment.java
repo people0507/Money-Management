@@ -35,7 +35,6 @@ public class StatiticsFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    private final int bg = 0xFFFFF6E5;
 
     TabLayout tabLayout;
     ViewPager2 viewPager2;
@@ -86,23 +85,6 @@ public class StatiticsFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_statitics, container, false);
-        PieChart pieChart = (PieChart)view.findViewById(R.id.pie_chart);
-        ArrayList<PieEntry> entries = new ArrayList<>();
-        entries.add(new PieEntry(0.5f, "Shopping"));
-        entries.add(new PieEntry(0.15f, "Subcription"));
-        entries.add(new PieEntry(0.10f, "Food"));
-
-        PieDataSet dataSet = new PieDataSet(entries, "Categories");
-        dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
-        dataSet.setValueTextColor(Color.BLACK);
-        dataSet.setValueTextSize(16f);
-
-        PieData data = new PieData(dataSet);
-        pieChart.setData(data);
-        pieChart.getDescription().setEnabled(false);
-        pieChart.setCenterText("9400.0");
-        pieChart.setHoleColor(bg);
-        pieChart.animateY(2000);
         return view;
 
     }
