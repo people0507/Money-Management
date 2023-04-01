@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.moneymanagement.MainActivity;
 import com.example.moneymanagement.R;
@@ -25,6 +26,8 @@ public class TranIncomeFragment extends Fragment {
     private RecyclerView.LayoutManager layoutManager;
 
     TransIncomeRecyclerAdapter transIncomeRecyclerAdapter;
+    Button btnToday, btnMonth,btnYear,btnWeek;
+
 
     public TranIncomeFragment() {
         // Required empty public constructor
@@ -41,6 +44,55 @@ public class TranIncomeFragment extends Fragment {
         List<Income> list = MainActivity.moneyDatabaseClass.moneyDao().getMonthIncome();
         transIncomeRecyclerAdapter = new TransIncomeRecyclerAdapter(list);
         recyclerView.setAdapter(transIncomeRecyclerAdapter);
+        btnToday = view.findViewById(R.id.Today);
+        btnMonth = view.findViewById(R.id.Month);
+        btnWeek = view.findViewById(R.id.Week);
+        btnYear = view.findViewById(R.id.Year);
+
+        btnToday.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                recyclerView = view.findViewById(R.id.transIncome);
+                layoutManager = new LinearLayoutManager(getActivity());
+                recyclerView.setLayoutManager(layoutManager);
+                List<Income> list = MainActivity.moneyDatabaseClass.moneyDao().getIncome();
+                transIncomeRecyclerAdapter = new TransIncomeRecyclerAdapter(list);
+                recyclerView.setAdapter(transIncomeRecyclerAdapter);
+            }
+        });
+        btnMonth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view1) {
+                recyclerView = view.findViewById(R.id.transIncome);
+                layoutManager = new LinearLayoutManager(getActivity());
+                recyclerView.setLayoutManager(layoutManager);
+                List<Income> list = MainActivity.moneyDatabaseClass.moneyDao().getMonthIncome();
+                transIncomeRecyclerAdapter = new TransIncomeRecyclerAdapter(list);
+                recyclerView.setAdapter(transIncomeRecyclerAdapter);
+            }
+        });
+        btnWeek.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view2) {
+                recyclerView = view.findViewById(R.id.transIncome);
+                layoutManager = new LinearLayoutManager(getActivity());
+                recyclerView.setLayoutManager(layoutManager);
+                List<Income> list = MainActivity.moneyDatabaseClass.moneyDao().getWeekIncome();
+                transIncomeRecyclerAdapter = new TransIncomeRecyclerAdapter(list);
+                recyclerView.setAdapter(transIncomeRecyclerAdapter);
+            }
+        });
+        btnYear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view3) {
+                recyclerView = view.findViewById(R.id.transIncome);
+                layoutManager = new LinearLayoutManager(getActivity());
+                recyclerView.setLayoutManager(layoutManager);
+                List<Income> list = MainActivity.moneyDatabaseClass.moneyDao().getYearIncome();
+                transIncomeRecyclerAdapter = new TransIncomeRecyclerAdapter(list);
+                recyclerView.setAdapter(transIncomeRecyclerAdapter);
+            }
+        });
         return view;
     }
 }
