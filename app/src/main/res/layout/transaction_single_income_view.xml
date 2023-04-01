@@ -15,7 +15,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="250dp"
+                android:layout_width="260dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:orientation="vertical">
@@ -41,28 +41,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:orientation="vertical">
-
                 <LinearLayout
-                    android:layout_width="70dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:layout_width="10dp"
+                        android:layout_width="15dp"
                         android:layout_height="20dp"
-                        android:text="-"
-                        android:textColor="@color/red"
+                        android:text="+"
+                        android:textColor="@color/green"
                         android:textStyle="bold"
                         android:textAppearance="@style/ThinText" />
-
                     <TextView
                         android:layout_width="79dp"
                         android:layout_height="20dp"
                         android:text="Value"
-                        android:textColor="@color/red"
+                        android:textColor="@color/green"
                         android:textStyle="bold"
                         android:id="@+id/transactionValue"
-
-                        android:textAppearance="@style/ThinText"/>
+                        android:textAppearance="@style/ThinText" />
                 </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
@@ -73,7 +70,7 @@
                     android:textAppearance="@style/SmallText_7"
                     android:textColor="@color/grey_desTrans"
                     android:text="Date"
-                    android:id="@+id/expenseDate"/>
+                    android:id="@+id/incomeDate"/>
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>
