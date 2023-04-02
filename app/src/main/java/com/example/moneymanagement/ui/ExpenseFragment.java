@@ -10,7 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.moneymanagement.MainActivity;
 import com.example.moneymanagement.R;
+import com.example.moneymanagement.model.Expense;
+import com.example.moneymanagement.model.MoneyDao;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
@@ -19,13 +22,15 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class ExpenseFragment extends Fragment {
 
     private final int bg = 0xFFFFF6E5;
 
-
+    List<Expense> list;
+    MoneyDao dao = MainActivity.moneyDatabaseClass.moneyDao();
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +42,7 @@ public class ExpenseFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_expense, container, false);
         PieChart pieChart = (PieChart)view.findViewById(R.id.ex_pie_chart);
         ArrayList<PieEntry> entries = new ArrayList<>();
+
         entries.add(new PieEntry(0.5f, "Shopping"));
         entries.add(new PieEntry(0.15f, "Subcription"));
         entries.add(new PieEntry(0.10f, "Food"));
@@ -49,9 +55,9 @@ public class ExpenseFragment extends Fragment {
         PieData data = new PieData(dataSet);
         pieChart.setData(data);
         pieChart.getDescription().setEnabled(false);
-        pieChart.setCenterText("9400.0");
         pieChart.setHoleColor(bg);
         pieChart.animateY(2000);
+        dao.getValueSum().observe(this,sum->pieChart.setCenterText(String.valueOf(sum)));
         return view;
     }
 }
