@@ -15,12 +15,12 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="250dp"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:orientation="vertical">
                 <TextView
-                    android:layout_width="79dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:text="Category"
                     android:id="@+id/transactionCategory"
@@ -29,7 +29,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="30dp"/>
                 <TextView
-                    android:layout_width="140dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:text="Description"
                     android:id="@+id/transactionDes"
@@ -55,7 +55,7 @@
                         android:textAppearance="@style/ThinText" />
 
                     <TextView
-                        android:layout_width="79dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:text="Value"
                         android:textColor="@color/red"

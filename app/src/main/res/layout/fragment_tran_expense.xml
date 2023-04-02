@@ -1,51 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui2.TranExpenseFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:gravity="center_horizontal"
+        android:layout_marginVertical="10dp">
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="100dp"
+            android:layout_width="60dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/hover_bt_color"
             android:background="@drawable/whitebg"
             android:id="@+id/Today"
             android:text="Today"/>
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="100dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/hover_bt_color"
             android:background="@drawable/whitebg"
             android:id="@+id/Week"
             android:text="Week"/>
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="100dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/hover_bt_color"
             android:background="@drawable/whitebg"
             android:id="@+id/Month"
             android:text="Month"/>
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="100dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/hover_bt_color"
             android:background="@drawable/whitebg"
             android:id="@+id/Year"
             android:text="Year"/>
+
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/transExpense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:orientation="vertical" />
 
-    </LinearLayout>
 
-</FrameLayout>
+
+</LinearLayout>

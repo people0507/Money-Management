@@ -15,7 +15,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:layout_width="260dp"
+                android:layout_width="270dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:orientation="vertical">
@@ -53,7 +53,7 @@
                         android:textStyle="bold"
                         android:textAppearance="@style/ThinText" />
                     <TextView
-                        android:layout_width="79dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:text="Value"
                         android:textColor="@color/green"
