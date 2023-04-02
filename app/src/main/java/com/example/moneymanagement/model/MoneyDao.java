@@ -36,4 +36,6 @@ public interface MoneyDao {
     LiveData<Integer> getValueIncomeSum();
     @Query("SELECT SUM(value) as total_sum FROM ( SELECT value as value FROM Income UNION  SELECT (-value) as value FROM Expense )")
     LiveData<Integer> getIncomeMinusExpense();
+    @Query("SELECT * FROM Expense")
+    LiveData<List<Expense>> getChartExpense();
 }
