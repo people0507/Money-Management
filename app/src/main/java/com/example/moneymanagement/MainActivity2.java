@@ -44,7 +44,7 @@ public class MainActivity2 extends AppCompatActivity {
                     replaceFragment(new AddFragment());
                     break;
                 case R.id.sta_icon:
-                    replaceFragment(new ProfileFragment());
+                    replaceFragment(new StatiticsFragment());
                     break;
                 case R.id.pro_icon:
                     replaceFragment(new ProfileFragment());

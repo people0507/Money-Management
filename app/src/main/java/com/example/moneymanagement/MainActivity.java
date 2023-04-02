@@ -1,6 +1,7 @@
 package com.example.moneymanagement;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +10,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.example.moneymanagement.model.MoneyDatabaseClass;
+
 public class MainActivity extends AppCompatActivity {
+    public static MoneyDatabaseClass moneyDatabaseClass;
 
     Button btnCon;
     @Override
@@ -21,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnCon = findViewById(R.id.btnCon);
+
+        moneyDatabaseClass = Room.databaseBuilder(getApplicationContext(),MoneyDatabaseClass.class,"moneyDb2").allowMainThreadQueries().build();
         btnCon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
