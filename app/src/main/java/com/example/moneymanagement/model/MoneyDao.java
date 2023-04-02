@@ -38,4 +38,6 @@ public interface MoneyDao {
     LiveData<Integer> getIncomeMinusExpense();
     @Query("SELECT * FROM Expense")
     LiveData<List<Expense>> getChartExpense();
+    @Query("SELECT * FROM Income")
+    LiveData<List<Income>> getChartIncome();
 }

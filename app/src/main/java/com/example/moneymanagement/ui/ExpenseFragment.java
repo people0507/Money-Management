@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
@@ -28,8 +29,6 @@ import java.util.List;
 public class ExpenseFragment extends Fragment {
 
     private final int bg = 0xFFFFF6E5;
-
-    List<Expense> list;
     MoneyDao dao = MainActivity.moneyDatabaseClass.moneyDao();
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -41,22 +40,27 @@ public class ExpenseFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_expense, container, false);
         PieChart pieChart = (PieChart)view.findViewById(R.id.ex_pie_chart);
-        ArrayList<PieEntry> entries = new ArrayList<>();
 
-        entries.add(new PieEntry(0.5f, "Shopping"));
-        entries.add(new PieEntry(0.15f, "Subcription"));
-        entries.add(new PieEntry(0.10f, "Food"));
 
-        PieDataSet dataSet = new PieDataSet(entries, "Categories");
-        dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
-        dataSet.setValueTextColor(Color.BLACK);
-        dataSet.setValueTextSize(16f);
+        dao.getChartExpense().observe(this, new Observer<List<Expense>>() {
+            @Override
+            public void onChanged(List<Expense> list) {
+                ArrayList<PieEntry> entries = new ArrayList<>();
+                for(Expense expense:list){
+                    entries.add(new PieEntry(expense.getValue(),expense.getCategory()));
+                }
+                PieDataSet dataSet = new PieDataSet(entries, "Categories");
+                dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+                dataSet.setValueTextColor(Color.BLACK);
+                dataSet.setValueTextSize(16f);
+                PieData data = new PieData(dataSet);
+                pieChart.setData(data);
+                pieChart.getDescription().setEnabled(false);
+                pieChart.setHoleColor(bg);
+                pieChart.animateY(2000);
 
-        PieData data = new PieData(dataSet);
-        pieChart.setData(data);
-        pieChart.getDescription().setEnabled(false);
-        pieChart.setHoleColor(bg);
-        pieChart.animateY(2000);
+            }
+        });
         dao.getValueSum().observe(this,sum->pieChart.setCenterText(String.valueOf(sum)));
         return view;
     }
