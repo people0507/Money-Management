@@ -62,6 +62,8 @@ public class IncomeFragment extends Fragment {
                 pieChart.setHoleColor(bg);
                 pieChart.animateY(2000);
                 dao.getValueSum3MonthIC().observe(IncomeFragment.this,sum->pieChart.setCenterText(String.valueOf(sum)));
+                pieChart.setCenterTextSize(40f);
+
             }
     });
 
