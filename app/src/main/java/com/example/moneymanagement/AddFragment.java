@@ -50,41 +50,50 @@ public class AddFragment extends Fragment {
         btnIncome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String category = inputCategory.getText().toString();
-                String describe = inputDescribe.getText().toString();
-                String date = inputDate.getText().toString();
-                Float value = Float.parseFloat(inputValue.getText().toString());
-                Income income = new Income();
-                income.setCategory(category);
-                income.setDescribe(describe);
-                income.setValue(value);
-                income.setDate(date);
-                MainActivity.moneyDatabaseClass.moneyDao().addIncome(income);
-                Toast.makeText(getActivity(), "Data Successfully", Toast.LENGTH_SHORT).show();
-                inputCategory.setText("");
-                inputDescribe.setText("");
-                inputValue.setText("");
-
-
+                if (inputValue.getText().toString().isEmpty() || inputCategory.getText().toString().isEmpty() || inputDescribe.getText().toString().isEmpty()) {
+                    Toast.makeText(getActivity(), "You haven't typed anything", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    String category = inputCategory.getText().toString();
+                    String describe = inputDescribe.getText().toString();
+                    String date = inputDate.getText().toString();
+                    Float value = Float.parseFloat(inputValue.getText().toString());
+                    Income income = new Income();
+                    income.setCategory(category);
+                    income.setDescribe(describe);
+                    income.setValue(value);
+                    income.setDate(date);
+                    MainActivity.moneyDatabaseClass.moneyDao().addIncome(income);
+                    Toast.makeText(getActivity(), "Add Data Successfully", Toast.LENGTH_SHORT).show();
+                    inputCategory.setText("");
+                    inputDescribe.setText("");
+                    inputValue.setText("");
+                }
             }
         });
         btnExpense.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String category = inputCategory.getText().toString();
-                String describe = inputDescribe.getText().toString();
-                String date = inputDate.getText().toString();
-                Float value = Float.parseFloat(inputValue.getText().toString());
-                Expense expense = new Expense();
-                expense.setCategory(category);
-                expense.setDescribe(describe);
-                expense.setValue(value);
-                expense.setDate(date);
-                MainActivity.moneyDatabaseClass.moneyDao().addExpense(expense);
-                Toast.makeText(getActivity(), "Data Successfully", Toast.LENGTH_SHORT).show();
-                inputCategory.setText("");
-                inputDescribe.setText("");
-                inputValue.setText("");
+                if (inputValue.getText().toString().isEmpty() || inputCategory.getText().toString().isEmpty() || inputDescribe.getText().toString().isEmpty()) {
+                    Toast.makeText(getActivity(), "You haven't typed anything", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    String category = inputCategory.getText().toString();
+                    String describe = inputDescribe.getText().toString();
+                    String date = inputDate.getText().toString();
+                    Float value = Float.parseFloat(inputValue.getText().toString());
+                    Expense expense = new Expense();
+                    expense.setCategory(category);
+                    expense.setDescribe(describe);
+                    expense.setValue(value);
+                    expense.setDate(date);
+                    MainActivity.moneyDatabaseClass.moneyDao().addExpense(expense);
+                    Toast.makeText(getActivity(), "Add Data Successfully", Toast.LENGTH_SHORT).show();
+                    inputCategory.setText("");
+                    inputDescribe.setText("");
+                    inputValue.setText("");
+                }
+
             }
         });
         return view;
