@@ -14,7 +14,7 @@ public interface MoneyDao {
     public void addIncome(Income income);
    @Insert
     public  void addExpense(Expense expense);
-   @Query("select * from Income  where date=DATE('now') limit 2")
+   @Query("select * from Income  where date=DATE('now')")
    public List<Income>getIncome();
    @Query("select * from Expense  where date=DATE('now') ")
     public List<Expense>getExpense();
