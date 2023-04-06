@@ -18,11 +18,16 @@ import com.example.moneymanagement.ui1.AdapterFragment1;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class HomeFragment extends Fragment {
 
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     AdapterFragment1 adapterFragment1;
+
+    TextView dmy;
     MoneyDao dao = MainActivity.moneyDatabaseClass.moneyDao();
 
 
@@ -37,6 +42,12 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE dd MMMM YYYY");
+        String currentDate = sdf.format(calendar.getTime()).toUpperCase();
+        dmy = view.findViewById(R.id.dmy);
+        dmy.setText(currentDate);
+
         dao.getValueSum().observe(this,sum->{
             TextView textView = view.findViewById(R.id.sumExpense);
             textView.setText(String.valueOf(sum));
