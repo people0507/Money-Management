@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.moneymanagement.MainActivity;
 import com.example.moneymanagement.R;
@@ -33,22 +34,36 @@ public class WeekFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_week, container, false);
-        recyclerView = view.findViewById(R.id.incomeRecycleView);
-        layoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(layoutManager);
         List<Income> list = MainActivity.moneyDatabaseClass.moneyDao().getWeekIncome();
-        incomeRecyclerAdapter = new IncomeRecyclerAdapter(list);
-        recyclerView.setAdapter(incomeRecyclerAdapter);
+        if (list.isEmpty()) {
 
+            TextView textView = view.findViewById(R.id.inform);
+            textView.setText("No data found");
+        } else {
 
-        recyclerView2 = view.findViewById(R.id.expenseRecycleView);
-        layoutManager2 = new LinearLayoutManager((getActivity()));
-        recyclerView2.setLayoutManager(layoutManager2);
+            recyclerView = view.findViewById(R.id.incomeRecycleView);
+            layoutManager = new LinearLayoutManager(getActivity());
+            recyclerView.setLayoutManager(layoutManager);
+            incomeRecyclerAdapter = new IncomeRecyclerAdapter(list);
+            recyclerView.setAdapter(incomeRecyclerAdapter);
+        }
+
         List<Expense> list1 = MainActivity.moneyDatabaseClass.moneyDao().getWeekExpense();
-        expenseRecyclerAdapter =new ExpenseRecyclerAdapter(list1);
-        recyclerView2.setAdapter(expenseRecyclerAdapter);
+        if (list1.isEmpty()) {
+
+            TextView textView = view.findViewById(R.id.inform1);
+            textView.setText("No data found");
+        } else {
+
+            recyclerView2 = view.findViewById(R.id.expenseRecycleView);
+            layoutManager2 = new LinearLayoutManager((getActivity()));
+            recyclerView2.setLayoutManager(layoutManager2);
+            expenseRecyclerAdapter =new ExpenseRecyclerAdapter(list1);
+            recyclerView2.setAdapter(expenseRecyclerAdapter);
+        }
+
 
         return view;
     }
