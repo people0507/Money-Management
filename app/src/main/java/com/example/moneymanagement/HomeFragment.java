@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.moneymanagement.model.ExpenseRecyclerAdapter;
 import com.example.moneymanagement.model.MoneyDao;
+import com.example.moneymanagement.model2.User;
 import com.example.moneymanagement.ui1.AdapterFragment1;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
@@ -27,7 +28,8 @@ public class HomeFragment extends Fragment {
     ViewPager2 viewPager2;
     AdapterFragment1 adapterFragment1;
 
-    TextView dmy;
+    TextView dmy,logoname;
+    private User user;
     MoneyDao dao = MainActivity.moneyDatabaseClass.moneyDao();
 
 
@@ -60,6 +62,7 @@ public class HomeFragment extends Fragment {
             TextView textView = view.findViewById(R.id.accBalans);
             textView.setText(String.valueOf(sum));
         });
+
         return view;
     }
 
