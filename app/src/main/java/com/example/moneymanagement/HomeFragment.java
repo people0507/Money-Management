@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,6 +50,15 @@ public class HomeFragment extends Fragment {
         String currentDate = sdf.format(calendar.getTime()).toUpperCase();
         dmy = view.findViewById(R.id.dmy);
         dmy.setText(currentDate);
+
+
+        logoname = view.findViewById(R.id.logo_name_home);
+        String userName = getArguments().getString("user_name");
+        if(userName != null){
+            logoname.setText(userName.toUpperCase());
+        } else {
+            logoname.setText("Emty");
+        }
 
         dao.getValueSum().observe(this,sum->{
             TextView textView = view.findViewById(R.id.sumExpense);
