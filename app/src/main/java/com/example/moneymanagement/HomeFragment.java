@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,15 +15,22 @@ import android.widget.TextView;
 
 import com.example.moneymanagement.model.ExpenseRecyclerAdapter;
 import com.example.moneymanagement.model.MoneyDao;
+import com.example.moneymanagement.model2.User;
 import com.example.moneymanagement.ui1.AdapterFragment1;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class HomeFragment extends Fragment {
 
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     AdapterFragment1 adapterFragment1;
+
+    TextView dmy,logoname;
+    private User user;
     MoneyDao dao = MainActivity.moneyDatabaseClass.moneyDao();
 
 
@@ -37,6 +45,21 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("EEEE dd MMMM YYYY");
+        String currentDate = sdf.format(calendar.getTime()).toUpperCase();
+        dmy = view.findViewById(R.id.dmy);
+        dmy.setText(currentDate);
+
+
+        logoname = view.findViewById(R.id.logo_name_home);
+        String userName = getArguments().getString("user_name");
+        if(userName != null){
+            logoname.setText(userName.toUpperCase());
+        } else {
+            logoname.setText("Emty");
+        }
+
         dao.getValueSum().observe(this,sum->{
             TextView textView = view.findViewById(R.id.sumExpense);
             textView.setText(String.valueOf(sum));
@@ -49,6 +72,7 @@ public class HomeFragment extends Fragment {
             TextView textView = view.findViewById(R.id.accBalans);
             textView.setText(String.valueOf(sum));
         });
+
         return view;
     }
 

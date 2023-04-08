@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginVertical="80dp"
+        android:layout_marginVertical="50dp"
         android:layout_marginHorizontal="20dp">
 
         <ImageView
@@ -32,6 +32,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/grey_desTrans"/>
             <TextView
+                android:id="@+id/profile_name"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:text="Vishnu P V"
@@ -53,119 +54,41 @@
 
  <FrameLayout
      android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:background="@drawable/tran_background"
-     android:layout_marginHorizontal="15dp">
+     android:layout_height="wrap_content">
 
      <LinearLayout
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
          android:orientation="vertical"
-         android:layout_marginHorizontal="20dp">
+         android:gravity="center">
 
-         <LinearLayout
-             android:layout_width="match_parent"
-             android:layout_height="50dp"
-             android:orientation="horizontal"
-             android:layout_marginVertical="20dp">
-
-
-             <ImageView
-                 android:layout_width="60dp"
-                 android:layout_height="match_parent"
-                 android:src="@drawable/wallet_icon"/>
-
-             <TextView
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:text="Account"
-                 android:gravity="center_vertical"
-                 android:textAppearance="@style/ThinText"
-                 android:layout_marginLeft="10dp"/>
-
-
-         </LinearLayout>
-         <LinearLayout
-             android:layout_width="match_parent"
-             android:layout_height="50dp"
-             android:orientation="horizontal"
-             android:layout_marginVertical="20dp">
-
-
-             <ImageView
-                 android:layout_width="60dp"
-                 android:layout_height="match_parent"
-                 android:src="@drawable/setting_icon"/>
-
-             <TextView
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:text="Settings"
-                 android:gravity="center_vertical"
-                 android:textAppearance="@style/ThinText"
-                 android:layout_marginLeft="10dp"/>
-
+         <androidx.appcompat.widget.AppCompatButton
+             android:layout_width="380dp"
+             android:layout_height="100dp"
+             android:gravity="center_vertical"
+             android:background="@drawable/box1_profile"
+             android:textAppearance="@style/ThinText" />
+         <androidx.appcompat.widget.AppCompatButton
+             android:layout_width="380dp"
+             android:layout_height="100dp"
+             android:gravity="center_vertical"
+             android:background="@drawable/box2_profile"
+             android:textAppearance="@style/ThinText" />
+         <androidx.appcompat.widget.AppCompatButton
+             android:layout_width="380dp"
+             android:layout_height="100dp"
+             android:gravity="center_vertical"
+             android:background="@drawable/box3_profile"
+             android:textAppearance="@style/ThinText" />
+         <androidx.appcompat.widget.AppCompatButton
+             android:id="@+id/logout_profile"
+             android:layout_width="380dp"
+             android:layout_height="100dp"
+             android:gravity="center_vertical"
+             android:background="@drawable/box4_profile"
+             android:textAppearance="@style/ThinText" />
 
          </LinearLayout>
-
-         <LinearLayout
-             android:layout_width="match_parent"
-             android:layout_height="50dp"
-             android:orientation="horizontal"
-             android:layout_marginVertical="20dp">
-
-
-             <ImageView
-                 android:layout_width="60dp"
-                 android:layout_height="match_parent"
-                 android:src="@drawable/export_icon"/>
-
-             <TextView
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:text="Export Data"
-                 android:gravity="center_vertical"
-                 android:textAppearance="@style/ThinText"
-                 android:layout_marginLeft="10dp"/>
-
-
-         </LinearLayout>
-
-         <LinearLayout
-             android:layout_width="match_parent"
-             android:layout_height="50dp"
-             android:orientation="horizontal"
-             android:layout_marginVertical="20dp">
-
-
-             <ImageView
-                 android:layout_width="60dp"
-                 android:layout_height="match_parent"
-                 android:src="@drawable/logout_icon"/>
-
-             <TextView
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:text="Logout"
-                 android:gravity="center_vertical"
-                 android:textAppearance="@style/ThinText"
-                 android:layout_marginLeft="10dp"/>
-
-
-         </LinearLayout>
-
-
-
-     </LinearLayout>
-
-
-
-
-
-
-
-
  </FrameLayout>
-
 
 </LinearLayout>
