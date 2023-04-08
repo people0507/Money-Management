@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                             User user = userDao.getUser(email.getText().toString(),pass.getText().toString());
                             if(user != null){
                                 Intent intent = new Intent(LoginActivity.this,MainActivity2.class);
-                                intent.putExtra("User", String.valueOf(user));
+                                intent.putExtra("user_name", user.getName());
                                 startActivity(intent);
                                 finish();
                             }
