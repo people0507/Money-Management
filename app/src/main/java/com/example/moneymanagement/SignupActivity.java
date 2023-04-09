@@ -32,7 +32,7 @@ public class SignupActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_signup2);
+        setContentView(R.layout.activity_signup);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
