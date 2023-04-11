@@ -17,6 +17,7 @@ import com.example.moneymanagement.R;
 import com.example.moneymanagement.model.Expense;
 import com.example.moneymanagement.model.Income;
 import com.example.moneymanagement.model.MoneyDao;
+import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
@@ -65,6 +66,8 @@ public class ExpenseFragment extends Fragment {
                 pieChart.setHoleColor(bg);
                 pieChart.animateY(2000);
                 dao.getValueSum().observe(ExpenseFragment.this,sum->pieChart.setCenterText(String.valueOf(sum)));
+                pieChart.setCenterTextSize(40f);
+
             }
         });
 

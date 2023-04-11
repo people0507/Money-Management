@@ -1,5 +1,6 @@
 package com.example.moneymanagement;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -27,6 +28,12 @@ public class MainActivity2 extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        Intent intent = getIntent();
+        String userName = intent.getStringExtra("user_name");
+        Bundle bundle = new Bundle();
+        bundle.putString("user_name", userName);
+
+
 
         binding = ActivityMain2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -35,7 +42,9 @@ public class MainActivity2 extends AppCompatActivity {
         {
             switch (item.getItemId()){
                 case R.id.home_icon:
-                    replaceFragment(new HomeFragment());
+                    HomeFragment homeFragment = new HomeFragment();
+                    homeFragment.setArguments(bundle);
+                    replaceFragment(homeFragment);
                     break;
                 case R.id.tran_icon:
                     replaceFragment(new TransactionFragment());
@@ -47,6 +56,8 @@ public class MainActivity2 extends AppCompatActivity {
                     replaceFragment(new StatiticsFragment());
                     break;
                 case R.id.pro_icon:
+                    ProfileFragment profileFragment =new ProfileFragment();
+                    profileFragment.setArguments(bundle);
                     replaceFragment(new ProfileFragment());
                     break;
 
@@ -55,9 +66,18 @@ public class MainActivity2 extends AppCompatActivity {
         });
 
     }
+
+
     private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        // Truyền bundle từ Activity sang Fragment
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            fragment.setArguments(bundle);
+        }
+
         fragmentTransaction.replace(R.id.nav_flayout,fragment);
         fragmentTransaction.commit();
     }

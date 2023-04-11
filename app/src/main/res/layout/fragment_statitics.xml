@@ -34,7 +34,7 @@
                     android:id="@+id/tab_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="10dp"
+                    android:layout_marginVertical="40dp"
                     android:layout_marginHorizontal="50dp"
                     android:background="@drawable/fixcolor_tablayout1"
                     app:tabBackground="@animator/color_tab_layout"
@@ -48,7 +48,7 @@
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/view_pager"
                     android:layout_width="match_parent"
-                    android:layout_height="600sp" />
+                    android:layout_height="550sp" />
             </LinearLayout>
 
 
